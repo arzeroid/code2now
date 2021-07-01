@@ -19,7 +19,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- โครงสร้างตาราง `amphur`
 -- 
 
-[CREATE] TABLE `amphur` (
+CREATE TABLE `amphur` (
   `amphur_id` int(5) NOT NULL auto_increment,
   `amphur_code` varchar(5) collate utf8_unicode_ci NOT NULL,
   `amphur_name` varchar(150) collate utf8_unicode_ci NOT NULL,
