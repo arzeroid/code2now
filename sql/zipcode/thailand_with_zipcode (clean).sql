@@ -19,9 +19,9 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- โครงสร้างตาราง `amphur`
 -- 
 
-CREATE TABLE `amphur` (
+[CREATE] TABLE `amphur` (
   `amphur_id` int(5) NOT NULL auto_increment,
-  `amphur_code` varchar(4) collate utf8_unicode_ci NOT NULL,
+  `amphur_code` varchar(5) collate utf8_unicode_ci NOT NULL,
   `amphur_name` varchar(150) collate utf8_unicode_ci NOT NULL,
   `geo_id` int(5) NOT NULL,
   `province_id` int(5) NOT NULL,
@@ -970,7 +970,7 @@ INSERT INTO `amphur` VALUES (1006, '3808', 'บุ่งคล้า', 3, 77);
 
 CREATE TABLE `tambon` (
   `tambon_id` int(5) NOT NULL auto_increment,
-  `tambon_code` varchar(6) collate utf8_unicode_ci NOT NULL,
+  `tambon_code` varchar(7) collate utf8_unicode_ci NOT NULL,
   `tambon_name` varchar(150) collate utf8_unicode_ci NOT NULL,
   `amphur_id` int(5) NOT NULL,
   `province_id` int(5) NOT NULL,
@@ -8488,7 +8488,7 @@ INSERT INTO `tambon` VALUES (8913, '380803', 'หนองเดิ่น', 1006
 
 CREATE TABLE `geography` (
   `geo_id` int(5) NOT NULL auto_increment,
-  `geo_name` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `geo_name` varchar(150) collate utf8_unicode_ci NOT NULL,
   PRIMARY KEY  (`geo_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=7 ;
 
@@ -8511,7 +8511,7 @@ INSERT INTO `geography` VALUES (6, 'ภาคใต้');
 
 CREATE TABLE `province` (
   `province_id` int(5) NOT NULL auto_increment,
-  `province_code` varchar(2) collate utf8_unicode_ci NOT NULL,
+  `province_code` varchar(3) collate utf8_unicode_ci NOT NULL,
   `province_name` varchar(150) collate utf8_unicode_ci NOT NULL,
   `geo_id` int(5) NOT NULL default '0',
   PRIMARY KEY  (`province_id`)
@@ -8607,7 +8607,7 @@ INSERT INTO `province` VALUES (77, '97', 'บึงกาฬ', 3);
 
 CREATE TABLE `zipcode` (
   `zipcode_id` int(5) NOT NULL auto_increment,
-  `tambon_code` varchar(6) collate utf8_unicode_ci NOT NULL,
+  `tambon_code` varchar(7) collate utf8_unicode_ci NOT NULL,
   `province_id` int(5) NOT NULL,
   `amphur_id` int(5) NOT NULL,
   `tambon_id` int(5) NOT NULL,
