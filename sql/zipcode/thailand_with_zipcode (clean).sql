@@ -19,7 +19,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- โครงสร้างตาราง `amphur`
 -- 
 
-CREATE TABLE `amphur` (
+CREATE TABLE IF NOT EXISTS `amphur` (
   `amphur_id` int(5) NOT NULL auto_increment,
   `amphur_code` varchar(5) collate utf8_unicode_ci NOT NULL,
   `amphur_name` varchar(150) collate utf8_unicode_ci NOT NULL,
@@ -32,56 +32,56 @@ CREATE TABLE `amphur` (
 -- dump ตาราง `amphur`
 -- 
 
-INSERT INTO `amphur` VALUES (1, '1001', 'เขตพระนคร', 2, 1);
-INSERT INTO `amphur` VALUES (2, '1002', 'เขตดุสิต', 2, 1);
-INSERT INTO `amphur` VALUES (3, '1003', 'เขตหนองจอก', 2, 1);
-INSERT INTO `amphur` VALUES (4, '1004', 'เขตบางรัก', 2, 1);
-INSERT INTO `amphur` VALUES (5, '1005', 'เขตบางเขน', 2, 1);
-INSERT INTO `amphur` VALUES (6, '1006', 'เขตบางกะปิ', 2, 1);
-INSERT INTO `amphur` VALUES (7, '1007', 'เขตปทุมวัน', 2, 1);
-INSERT INTO `amphur` VALUES (8, '1008', 'เขตป้อมปราบศัตรูพ่าย', 2, 1);
-INSERT INTO `amphur` VALUES (9, '1009', 'เขตพระโขนง', 2, 1);
-INSERT INTO `amphur` VALUES (10, '1010', 'เขตมีนบุรี', 2, 1);
-INSERT INTO `amphur` VALUES (11, '1011', 'เขตลาดกระบัง', 2, 1);
-INSERT INTO `amphur` VALUES (12, '1012', 'เขตยานนาวา', 2, 1);
-INSERT INTO `amphur` VALUES (13, '1013', 'เขตสัมพันธวงศ์', 2, 1);
-INSERT INTO `amphur` VALUES (14, '1014', 'เขตพญาไท', 2, 1);
-INSERT INTO `amphur` VALUES (15, '1015', 'เขตธนบุรี', 2, 1);
-INSERT INTO `amphur` VALUES (16, '1016', 'เขตบางกอกใหญ่', 2, 1);
-INSERT INTO `amphur` VALUES (17, '1017', 'เขตห้วยขวาง', 2, 1);
-INSERT INTO `amphur` VALUES (18, '1018', 'เขตคลองสาน', 2, 1);
-INSERT INTO `amphur` VALUES (19, '1019', 'เขตตลิ่งชัน', 2, 1);
-INSERT INTO `amphur` VALUES (20, '1020', 'เขตบางกอกน้อย', 2, 1);
-INSERT INTO `amphur` VALUES (21, '1021', 'เขตบางขุนเทียน', 2, 1);
-INSERT INTO `amphur` VALUES (22, '1022', 'เขตภาษีเจริญ', 2, 1);
-INSERT INTO `amphur` VALUES (23, '1023', 'เขตหนองแขม', 2, 1);
-INSERT INTO `amphur` VALUES (24, '1024', 'เขตราษฎร์บูรณะ', 2, 1);
-INSERT INTO `amphur` VALUES (25, '1025', 'เขตบางพลัด', 2, 1);
-INSERT INTO `amphur` VALUES (26, '1026', 'เขตดินแดง', 2, 1);
-INSERT INTO `amphur` VALUES (27, '1027', 'เขตบึงกุ่ม', 2, 1);
-INSERT INTO `amphur` VALUES (28, '1028', 'เขตสาทร', 2, 1);
-INSERT INTO `amphur` VALUES (29, '1029', 'เขตบางซื่อ', 2, 1);
-INSERT INTO `amphur` VALUES (30, '1030', 'เขตจตุจักร', 2, 1);
-INSERT INTO `amphur` VALUES (31, '1031', 'เขตบางคอแหลม', 2, 1);
-INSERT INTO `amphur` VALUES (32, '1032', 'เขตประเวศ', 2, 1);
-INSERT INTO `amphur` VALUES (33, '1033', 'เขตคลองเตย', 2, 1);
-INSERT INTO `amphur` VALUES (34, '1034', 'เขตสวนหลวง', 2, 1);
-INSERT INTO `amphur` VALUES (35, '1035', 'เขตจอมทอง', 2, 1);
-INSERT INTO `amphur` VALUES (36, '1036', 'เขตดอนเมือง', 2, 1);
-INSERT INTO `amphur` VALUES (37, '1037', 'เขตราชเทวี', 2, 1);
-INSERT INTO `amphur` VALUES (38, '1038', 'เขตลาดพร้าว', 2, 1);
-INSERT INTO `amphur` VALUES (39, '1039', 'เขตวัฒนา', 2, 1);
-INSERT INTO `amphur` VALUES (40, '1040', 'เขตบางแค', 2, 1);
-INSERT INTO `amphur` VALUES (41, '1041', 'เขตหลักสี่', 2, 1);
-INSERT INTO `amphur` VALUES (42, '1042', 'เขตสายไหม', 2, 1);
-INSERT INTO `amphur` VALUES (43, '1043', 'เขตคันนายาว', 2, 1);
-INSERT INTO `amphur` VALUES (44, '1044', 'เขตสะพานสูง', 2, 1);
-INSERT INTO `amphur` VALUES (45, '1045', 'เขตวังทองหลาง', 2, 1);
-INSERT INTO `amphur` VALUES (46, '1046', 'เขตคลองสามวา', 2, 1);
-INSERT INTO `amphur` VALUES (47, '1047', 'เขตบางนา', 2, 1);
-INSERT INTO `amphur` VALUES (48, '1048', 'เขตทวีวัฒนา', 2, 1);
-INSERT INTO `amphur` VALUES (49, '1049', 'เขตทุ่งครุ', 2, 1);
-INSERT INTO `amphur` VALUES (50, '1050', 'เขตบางบอน', 2, 1);
+INSERT INTO `amphur` VALUES (1, '1001', 'พระนคร', 2, 1);
+INSERT INTO `amphur` VALUES (2, '1002', 'ดุสิต', 2, 1);
+INSERT INTO `amphur` VALUES (3, '1003', 'หนองจอก', 2, 1);
+INSERT INTO `amphur` VALUES (4, '1004', 'บางรัก', 2, 1);
+INSERT INTO `amphur` VALUES (5, '1005', 'บางเขน', 2, 1);
+INSERT INTO `amphur` VALUES (6, '1006', 'บางกะปิ', 2, 1);
+INSERT INTO `amphur` VALUES (7, '1007', 'ปทุมวัน', 2, 1);
+INSERT INTO `amphur` VALUES (8, '1008', 'ป้อมปราบศัตรูพ่าย', 2, 1);
+INSERT INTO `amphur` VALUES (9, '1009', 'พระโขนง', 2, 1);
+INSERT INTO `amphur` VALUES (10, '1010', 'มีนบุรี', 2, 1);
+INSERT INTO `amphur` VALUES (11, '1011', 'ลาดกระบัง', 2, 1);
+INSERT INTO `amphur` VALUES (12, '1012', 'ยานนาวา', 2, 1);
+INSERT INTO `amphur` VALUES (13, '1013', 'สัมพันธวงศ์', 2, 1);
+INSERT INTO `amphur` VALUES (14, '1014', 'พญาไท', 2, 1);
+INSERT INTO `amphur` VALUES (15, '1015', 'ธนบุรี', 2, 1);
+INSERT INTO `amphur` VALUES (16, '1016', 'บางกอกใหญ่', 2, 1);
+INSERT INTO `amphur` VALUES (17, '1017', 'ห้วยขวาง', 2, 1);
+INSERT INTO `amphur` VALUES (18, '1018', 'คลองสาน', 2, 1);
+INSERT INTO `amphur` VALUES (19, '1019', 'ตลิ่งชัน', 2, 1);
+INSERT INTO `amphur` VALUES (20, '1020', 'บางกอกน้อย', 2, 1);
+INSERT INTO `amphur` VALUES (21, '1021', 'บางขุนเทียน', 2, 1);
+INSERT INTO `amphur` VALUES (22, '1022', 'ภาษีเจริญ', 2, 1);
+INSERT INTO `amphur` VALUES (23, '1023', 'หนองแขม', 2, 1);
+INSERT INTO `amphur` VALUES (24, '1024', 'ราษฎร์บูรณะ', 2, 1);
+INSERT INTO `amphur` VALUES (25, '1025', 'บางพลัด', 2, 1);
+INSERT INTO `amphur` VALUES (26, '1026', 'ดินแดง', 2, 1);
+INSERT INTO `amphur` VALUES (27, '1027', 'บึงกุ่ม', 2, 1);
+INSERT INTO `amphur` VALUES (28, '1028', 'สาทร', 2, 1);
+INSERT INTO `amphur` VALUES (29, '1029', 'บางซื่อ', 2, 1);
+INSERT INTO `amphur` VALUES (30, '1030', 'จตุจักร', 2, 1);
+INSERT INTO `amphur` VALUES (31, '1031', 'บางคอแหลม', 2, 1);
+INSERT INTO `amphur` VALUES (32, '1032', 'ประเวศ', 2, 1);
+INSERT INTO `amphur` VALUES (33, '1033', 'คลองเตย', 2, 1);
+INSERT INTO `amphur` VALUES (34, '1034', 'สวนหลวง', 2, 1);
+INSERT INTO `amphur` VALUES (35, '1035', 'จอมทอง', 2, 1);
+INSERT INTO `amphur` VALUES (36, '1036', 'ดอนเมือง', 2, 1);
+INSERT INTO `amphur` VALUES (37, '1037', 'ราชเทวี', 2, 1);
+INSERT INTO `amphur` VALUES (38, '1038', 'ลาดพร้าว', 2, 1);
+INSERT INTO `amphur` VALUES (39, '1039', 'วัฒนา', 2, 1);
+INSERT INTO `amphur` VALUES (40, '1040', 'บางแค', 2, 1);
+INSERT INTO `amphur` VALUES (41, '1041', 'หลักสี่', 2, 1);
+INSERT INTO `amphur` VALUES (42, '1042', 'สายไหม', 2, 1);
+INSERT INTO `amphur` VALUES (43, '1043', 'คันนายาว', 2, 1);
+INSERT INTO `amphur` VALUES (44, '1044', 'สะพานสูง', 2, 1);
+INSERT INTO `amphur` VALUES (45, '1045', 'วังทองหลาง', 2, 1);
+INSERT INTO `amphur` VALUES (46, '1046', 'คลองสามวา', 2, 1);
+INSERT INTO `amphur` VALUES (47, '1047', 'บางนา', 2, 1);
+INSERT INTO `amphur` VALUES (48, '1048', 'ทวีวัฒนา', 2, 1);
+INSERT INTO `amphur` VALUES (49, '1049', 'ทุ่งครุ', 2, 1);
+INSERT INTO `amphur` VALUES (50, '1050', 'บางบอน', 2, 1);
 INSERT INTO `amphur` VALUES (52, '1101', 'เมืองสมุทรปราการ', 2, 2);
 INSERT INTO `amphur` VALUES (53, '1102', 'บางบ่อ', 2, 2);
 INSERT INTO `amphur` VALUES (54, '1103', 'บางพลี', 2, 2);
@@ -968,7 +968,7 @@ INSERT INTO `amphur` VALUES (1006, '3808', 'บุ่งคล้า', 3, 77);
 -- โครงสร้างตาราง `tambon`
 -- 
 
-CREATE TABLE `tambon` (
+CREATE TABLE IF NOT EXISTS `tambon` (
   `tambon_id` int(5) NOT NULL auto_increment,
   `tambon_code` varchar(7) collate utf8_unicode_ci NOT NULL,
   `tambon_name` varchar(150) collate utf8_unicode_ci NOT NULL,
@@ -8486,7 +8486,7 @@ INSERT INTO `tambon` VALUES (8913, '380803', 'หนองเดิ่น', 1006
 -- โครงสร้างตาราง `geography`
 -- 
 
-CREATE TABLE `geography` (
+CREATE TABLE IF NOT EXISTS `geography` (
   `geo_id` int(5) NOT NULL auto_increment,
   `geo_name` varchar(150) collate utf8_unicode_ci NOT NULL,
   PRIMARY KEY  (`geo_id`)
@@ -8509,7 +8509,7 @@ INSERT INTO `geography` VALUES (6, 'ภาคใต้');
 -- โครงสร้างตาราง `province`
 -- 
 
-CREATE TABLE `province` (
+CREATE TABLE IF NOT EXISTS `province` (
   `province_id` int(5) NOT NULL auto_increment,
   `province_code` varchar(3) collate utf8_unicode_ci NOT NULL,
   `province_name` varchar(150) collate utf8_unicode_ci NOT NULL,
@@ -8605,7 +8605,7 @@ INSERT INTO `province` VALUES (77, '97', 'บึงกาฬ', 3);
 -- โครงสร้างตาราง `zipcode`
 -- 
 
-CREATE TABLE `zipcode` (
+CREATE TABLE IF NOT EXISTS `zipcode` (
   `zipcode_id` int(5) NOT NULL auto_increment,
   `tambon_code` varchar(7) collate utf8_unicode_ci NOT NULL,
   `province_id` int(5) NOT NULL,
