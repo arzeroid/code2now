@@ -1,57 +1,6 @@
 {
     "$schema": "https://opencode.ai/config.json",
     "shell": "C:\\Program Files\\Git\\bin\\bash.exe",
-    "mcp": {
-        "context7": {
-            "type": "remote",
-            "url": "https://mcp.context7.com/mcp",
-            "headers": {
-                "Authorization": "Bearer ctx7sk-d7f968b5-1891-4a20-832d-92714b7130dd"
-            },
-            "enabled": false
-        },
-        "playwright": {
-            "type": "local",
-            "command": [
-                "npx",
-                "-y",
-                "@playwright/mcp@latest"
-            ],
-            "enabled": false
-        },
-        "docker": {
-            "type": "local",
-            "command": [
-                "npx",
-                "-y",
-                "@mcp-get/docker"
-            ],
-            "enabled": false
-        }
-    },
-    "provider": {
-        "ollama": {
-            "npm": "@ai-sdk/openai-compatible",
-            "name": "Ollama",
-            "options": {
-                "baseURL": "http://localhost:11434/v1"
-            },
-            "models": {
-                "qwen2.5-coder:7b-instruct-q4_K_M": {
-                    "name": "qwen2.5-coder:7b-instruct-q4_K_M"
-                },
-                "qwen2.5vl:3b": {
-                    "name": "qwen2.5vl:3b"
-                },
-                "qwen3.8-1bit:latest": {
-                    "name": "qwen3.8-1bit:latest"
-                },
-                "qwen2.5-coder:3b": {
-                    "name": "qwen2.5-coder:3b"
-                }
-            }
-        }
-    },
     "compaction": {
         "auto": true,
         "prune": true
